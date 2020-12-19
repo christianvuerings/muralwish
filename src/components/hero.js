@@ -1,5 +1,4 @@
 import React from 'react'
-import './lite-youtube-embed';
 
 import styles from './hero.module.css'
 
@@ -17,7 +16,7 @@ export default ({ data }) => {
 				<div className={styles.video}>
 					{/* <h1>{data.name}</h1> */}
 
-					<lite-youtube videoid="y3JdzYdo-TI" playlabel="Mural Wish: Funding Video" params="modestbranding=2"></lite-youtube>
+					<iframe title="Mural Wish: Funding Video" width="720" height="405" src="https://www.youtube-nocookie.com/embed/y3JdzYdo-TI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 
 				<a className={styles.donate} href={data.donateLink}>
