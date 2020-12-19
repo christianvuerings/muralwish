@@ -1,0 +1,107 @@
+.heroImage {
+	min-height: 100vh;
+	position: relative;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.heroImage::before{
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	opacity: 0.55;
+	position: absolute;
+	background: #000;
+}
+
+.heroInner {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.logo {
+	width: 240px;
+}
+.logo > object {
+	margin-top: 100px;
+	width: 100%;
+}
+
+.heroImage {
+  /*
+    Ensure golden ratio for the hero size while limiting it to some extend to
+    the viewport width
+  */
+  height: 61.8vh;
+  max-height: 400px;
+}
+
+.heroDetails {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  font-size: 14px;
+  padding: 0 0.5em;
+}
+
+@media(min-width: 600px) {
+  .heroDetails {
+    font-size: 16px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .heroDetails {
+    font-size: 20px;
+  }
+}
+
+.heroHeadline {
+  margin: 0;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+.video {
+	margin-top: 60px;
+	width: 720px;
+}
+
+.donate {
+	background: #F3A452;
+	border-radius: 25px;
+	color: #fff;
+	display: flex;
+	font-size: 32px;
+	font-weight: bold;
+	align-items: center;
+	margin-top: 60px;
+	padding: 12px 32px;
+	text-decoration: none;
+	box-shadow: 0 0px 9px 1px rgba(243,164,82,.4);
+}
+.donate:hover {
+	background: #fff;
+	box-shadow: 0 0px 9px 1px rgba(243,164,82,.8);
+	transition: box-shadow 0.3s ease-in-out;
+}
+.donate:hover svg path {
+	fill: #FF9BDB;
+}
+.donate:hover div {
+	color: #F3A452
+}
+.donate div {
+	margin-left: 12px;
+}
