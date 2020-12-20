@@ -1,5 +1,9 @@
+html {
+	background: #222;
+}
 .heroImage {
 	min-height: 100vh;
+	height: 100%;
 	position: relative;
 	align-items: center;
 	background-repeat: no-repeat;
@@ -21,14 +25,16 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	margin: 0 20px;
 	position: relative;
 }
 
 .logo {
-	width: 240px;
+	width: 200px;
+	width: clamp(160px, 40%, 240px);
 }
 .logo > object {
-	margin-top: 100px;
+	margin-top: 8vh;
 	width: 100%;
 }
 
@@ -74,8 +80,25 @@
 }
 
 .video {
-	margin-top: 60px;
-	width: 720px;
+	overflow: hidden;
+	position: relative;
+	margin: 60px 30px 0;
+	max-width: 720px;
+	width: 100%;
+}
+
+.video::after {
+	padding-top: 56.25%;
+	display: block;
+	content: '';
+}
+
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .donate {
@@ -86,6 +109,7 @@
 	font-size: 32px;
 	font-weight: bold;
 	align-items: center;
+	margin-bottom: 60px;
 	margin-top: 60px;
 	padding: 12px 32px;
 	text-decoration: none;

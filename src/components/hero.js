@@ -8,15 +8,14 @@ export default ({ data }) => {
 			backgroundImage: 'url("//images.ctfassets.net/ekyj8y78yjj2/6FlxiT5GlTAk6vYT5S4VNq/f9b772f6238b1a2a1320a5be85b28073/IMG_8304.JPG")'
 		}}>
 			<div className={styles.heroInner}>
+				{/* <h1>{data.name}</h1> */}
 
 				<div className={styles.logo}>
 					<object data={data.logo.file.url} type="image/svg+xml" aria-label="Logo"></object>
 				</div>
 
 				<div className={styles.video}>
-					{/* <h1>{data.name}</h1> */}
-
-					<iframe title="Mural Wish: Funding Video" width="720" height="405" src="https://www.youtube-nocookie.com/embed/y3JdzYdo-TI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe title="Mural Wish: Funding Video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/y3JdzYdo-TI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 
 				<a className={styles.donate} href={data.donateLink}>
